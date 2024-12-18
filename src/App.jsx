@@ -40,7 +40,7 @@ function App() {
   },[password])
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-5 my-8 text-orange-500 bg-gray-700 ' >
+      <div className='w-full max-w-md mx-auto sm:mx-0 shadow-md rounded-lg px-4 py-5 my-8 text-orange-500 bg-gray-700'>
         <h1 className='text-white text-center mb-4 text-xl'>Password generator</h1>
         <div className='flex shadow-lg rounded-lg overflow-hidden mb-3'>
           <input
@@ -63,7 +63,7 @@ function App() {
 
           />
           <label className='text-md'> Length:{length}</label>
-          <div className='flex gap-0.2'>
+          <div className='flex'>
             <input className='cursor-pointer'
               type='checkbox'
               id='numberAllowed'
@@ -74,7 +74,7 @@ function App() {
             />
             <label className='cursor-pointer' htmlFor='numberAllowed'>Numbers</label>
           </div>
-          <div className='flex gap-0.2'>
+          <div className='flex'>
             <input className='cursor-pointer'
               type='checkbox'
               id='charactersAllowed'
