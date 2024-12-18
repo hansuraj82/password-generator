@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
+import { TbRefresh } from "react-icons/tb";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState('');
   const [copyButton,setCopyButton] = useState('copy')
+  const [refresh,setRefresh] = useState(false);
   const passwordref = useRef(null)
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -29,7 +31,7 @@ function App() {
   useEffect(() => {
     passwordGenerator()
     setCopyButton('copy')
-  },[numberAllowed,charAllowed,length,passwordGenerator])
+  },[numberAllowed,charAllowed,length,passwordGenerator,refresh])
 
   const copyPasswordToClipBoard = useCallback(() => {
     passwordref.current?.select()
@@ -86,6 +88,10 @@ function App() {
             <label className='cursor-pointer' htmlFor='charactersAllowed'>Characters</label>
           </div>
         </div>
+        <div className='flex justify-center align-center text-4xl mt-4'>< TbRefresh className='cursor-pointer' onClick={() => {
+          setRefresh((prev) => !prev)
+        }}></TbRefresh></div>
+        
       </div>
 
     </>
