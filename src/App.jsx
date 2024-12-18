@@ -40,7 +40,7 @@ function App() {
   },[password])
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-5 my-8 text-orange-500 bg-gray-700'>
+      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-5 my-8 text-orange-500 bg-gray-700 ' >
         <h1 className='text-white text-center mb-4 text-xl'>Password generator</h1>
         <div className='flex shadow-lg rounded-lg overflow-hidden mb-3'>
           <input
@@ -53,7 +53,7 @@ function App() {
           />
           <button className='outline-none bg-blue-700 text-white p-5' onClick={copyPasswordToClipBoard}>{copyButton}</button>
         </div>
-        <div className='flex text-sm my-2 gap-x-5 '>
+        <div className='flex text-sm my-2 gap-x-1 justify-center items-center'>
           <input className='cursor-pointer '
             type='range'
             min={6}
@@ -62,8 +62,8 @@ function App() {
             value={length}
 
           />
-          <label className='text-md'> Length: {length}</label>
-          <div className='flex gap-1'>
+          <label className='text-md'> Length:{length}</label>
+          <div className='flex gap-0.2'>
             <input className='cursor-pointer'
               type='checkbox'
               id='numberAllowed'
@@ -74,7 +74,7 @@ function App() {
             />
             <label className='cursor-pointer' htmlFor='numberAllowed'>Numbers</label>
           </div>
-          <div className='flex gap-1'>
+          <div className='flex gap-0.2'>
             <input className='cursor-pointer'
               type='checkbox'
               id='charactersAllowed'
